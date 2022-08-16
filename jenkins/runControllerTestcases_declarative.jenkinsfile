@@ -1,4 +1,4 @@
-currentBuild.displayName = cycle
+currentBuild.displayName = 'cycle'
 
 automated_component = "Automated"
 controller_components = [automated_component, "Controller"]
