@@ -11,7 +11,7 @@ node('jenkinsSlave1'){
     date = date.getAt(Calendar.DATE)
    //  tag = 'Version' + '_automation_' + year + month + date
     tag = '_automation_' + sdate.format(date)
-    'project' = "${project}"
+    project ="${project}"
     
     currentBuild.displayName = tag
     try {

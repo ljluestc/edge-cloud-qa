@@ -28,7 +28,7 @@ node('jenkinsSlave1'){
     //tag = 'Version' + '_automation_' + year + month + date
     cycle = 'Version' + '_staging_' + dateValue
     tag = dateValue
-    'project' = "${project}"
+    project ="${project}"
 
     //controller = 'mexplat-stage.ctrl.mobiledgex.net:55001'
     
