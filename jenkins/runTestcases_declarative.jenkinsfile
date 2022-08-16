@@ -150,7 +150,7 @@ pipeline{
                                       ';export AUTOMATION_CONTROLLER_ADDRESS=' + params.Controller + 
                                       ';export AUTOMATION_DME_ADDRESS=' + params.DME + 
                                       ';export AUTOMATION_DME_REST_ADDRESS=' + params.DMERest + 
-                                      //';export AUTOMATION_VERSION=' + params.Version + 
+                                      //';export AUTOMATION_VERSION=' + params.'Version' + 
                                       ';export AUTOMATION_DME_CERT=' + params.DMERestCert + 
                                       ';export AUTOMATION_OPENSTACK_DEDICATED_ENV=' + params.OpenStackEnv + 
                                       ';export AUTOMATION_OPENSTACK_SHARED_ENV=' + params.OpenStackEnv + 
@@ -164,7 +164,7 @@ pipeline{
                                       ';export AUTOMATION_INFLUXDB_ADDRESS=' + params.InfluxDB + 
                                       ';export AUTOMATION_OPENSTACK_VMPOOL_ENV=' + params.OpenStackEnv + 
                                       ';export AUTOMATION_OPENSTACK_VGPU_ENV=' + params.OpenStackEnv + 
-                                      ';export AUTOMATION_VERSION=' + params.CRMUpgradeVersion +
+                                      ';export AUTOMATION_VERSION=' + params.CRMUpgrade'Version' +
                                       ';./execJira_parallel.py --test_timeout=' + params.TestTimeout + ' ' + runfailedonly_arg)
                         }
                     }

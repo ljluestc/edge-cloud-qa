@@ -25,8 +25,8 @@ node('jenkinsSlave1'){
     //year = date[Calendar.YEAR]
     //month = date[Calendar.MONTH] + 1
     //date = date.getAt(Calendar.DATE)
-    //tag = Version + '_automation_' + year + month + date
-    cycle = Version + '_staging_' + dateValue
+    //tag = 'Version' + '_automation_' + year + month + date
+    cycle = 'Version' + '_staging_' + dateValue
     tag = dateValue
     project = "${project}"
 

@@ -85,7 +85,7 @@ node('jenkinsGcpSlave1'){
     stage('make app') {
        date = new Date()
        sdate = new SimpleDateFormat("yyyMMdd")
-       tag = Version + '_automation_' + sdate.format(date)
+       tag = 'Version' + '_automation_' + sdate.format(date)
 
        dir('go/src/github.com/mobiledgex/edge-cloud-sampleapps/ComputerVisionServer') {
               sh 'sed -i \'s/docker\\.mobiledgex/docker-qa.mobiledgex/\' Makefile'

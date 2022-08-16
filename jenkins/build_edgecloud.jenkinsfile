@@ -6,11 +6,11 @@ builds1 = [:]
 node('jenkinsSlave1'){
     date = new Date()
     sdate = new SimpleDateFormat("yyyMMdd")
-    //year = date[Calendar.YEAR]
-    //month = date[Calendar.MONTH] + 1
-    //date = date.getAt(Calendar.DATE)
-    //tag = Version + '_automation_' + year + month + date
-    tag = Version + '_automation_' + sdate.format(date)
+    year = date[Calendar.YEAR]
+    month = date[Calendar.MONTH] + 1
+    date = date.getAt(Calendar.DATE)
+   //  tag = 'Version' + '_automation_' + year + month + date
+    tag = '_automation_' + sdate.format(date)
     project = "${project}"
     
     currentBuild.displayName = tag

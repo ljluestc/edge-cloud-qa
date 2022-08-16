@@ -282,7 +282,7 @@ pipeline{
 //            post {
 //                always {
 //                    dir('go/src/github.com/mobiledgex/jenkins') {
-//                        sh('export PYTHONPATH=$WORKSPACE/go/src/github.com/mobiledgex/modules;python3 ./updateCycleJira.py  --project ' + params.Project + ' --version ' + params.Version + ' --cycle ' + cycle + ' --enddate')
+//                        sh('export PYTHONPATH=$WORKSPACE/go/src/github.com/mobiledgex/modules;python3 ./updateCycleJira.py  --project ' + params.Project + ' --version ' + params.'Version' + ' --cycle ' + cycle + ' --enddate')
 //                    }
 //                    script {
 //                        script { slackMessage.good('Creating Report') }
@@ -301,7 +301,7 @@ pipeline{
             when { expression { params.RunReport == true && execute_tests == true} }
             steps {
                 dir('go/src/github.com/mobiledgex/jenkins') {
-                    sh('export PYTHONPATH=$WORKSPACE/go/src/github.com/mobiledgex/modules;python3 ./updateCycleJira.py  --project ' + params.Project + ' --version ' + params.Version + ' --cycle ' + cycle + ' --enddate')
+                    sh('export PYTHONPATH=$WORKSPACE/go/src/github.com/mobiledgex/modules;python3 ./updateCycleJira.py  --project ' + params.Project + ' --version ' + params.'Version' + ' --cycle ' + cycle + ' --enddate')
                 }
                 script {
                     slackMessage.good('Creating Report') 

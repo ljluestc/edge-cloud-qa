@@ -34,7 +34,7 @@ node('jenkinsGcpSlave1'){
     } else {
        dateValue = dateParm
     }
-    cycle = Version + '_' + CloudletName + '_' + dateValue
+    cycle = 'Version' + '_' + CloudletName + '_' + dateValue
     tag = dateValue
     project = "${project}"
     
