@@ -1,4 +1,4 @@
-project ="${project}"
+project ='test-proj'
 version = "${version}"
 cycle = "${cycle}"
 //controller = "${controller}"

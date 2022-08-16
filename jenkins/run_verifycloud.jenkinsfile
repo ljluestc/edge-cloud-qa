@@ -36,7 +36,7 @@ node('jenkinsGcpSlave1'){
     }
     cycle = 'Version' + '_' + CloudletName + '_' + dateValue
     tag = dateValue
-    project ="${project}"
+    project ='test-proj'
     
     currentBuild.displayName = cycle
 
