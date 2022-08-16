@@ -1,7 +1,7 @@
 currentBuild.displayName = cycle
 
 def generate_report(version, project, cycle, folder, duration, summary) {
-   def s = 'export PYTHONPATH=$WORKSPACE/go/src/github.com/mobiledgex/modules;python3 ./slackJiraReport.py --version ' + version + ' --'project' ' + 'project' + ' --cycle ' + cycle  + ' --slack'
+   def s = 'export PYTHONPATH=$WORKSPACE/go/src/github.com/mobiledgex/modules;python3 ./slackJiraReport.py --version ' + version + ' --project ' + 'project' + ' --cycle ' + cycle  + ' --slack'
    if(folder != null) {
       s = s + ' --folder ' + folder
    }
