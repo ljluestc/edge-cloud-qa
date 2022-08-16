@@ -23,7 +23,7 @@ def regressionPrep1(dateValue, cycle) {
 //                    currentBuild.displayName = cycle
 //                    slackMessage.good('Starting regression for ' + cycle)
 //                    checkLoadExists(dateValue)
-                    createCycle(cycle)
+                    createCycle('cycle')
                     addTestsToFolder(params.Version, params.Project, cycle)
 //                }
 //            }
@@ -50,7 +50,7 @@ def regressionPrep1(dateValue, cycle) {
         } 
 //        'Delete Openstack': {
 //            if(params.RunDeploy == true) {
-//                deleteCrm.openstack(cycle)
+//                deleteCrm.openstack('cycle')
 //            } else {
 //                println("skipping Delete Openstack since RunDeploy=${params.RunDeploy}")
 //            }
@@ -58,14 +58,14 @@ def regressionPrep1(dateValue, cycle) {
 //        },
 //        'Delete Anthos': {
 //            if(params.RunDeploy == true) {
-//                deleteCrm.anthos(cycle)
+//                deleteCrm.anthos('cycle')
 //            } else {
 //                println("skipping Delete Anthos since RunDeploy=${params.RunDeploy}")
 //            }
 //        },
 //        'Delete Fake': {
 //            if(params.RunDeploy == true) {
-//                deleteCrm.fake(cycle)
+//                deleteCrm.fake('cycle')
 //            } else {
 //                println("skipping Delete Fake since RunDeploy=${params.RunDeploy}")
 //            }
@@ -106,7 +106,7 @@ def regressionPrep2(dateValue, cycle) {
 
         'Delete Openstack': {
             if(params.RunDeploy == true) {
-                deleteCrm.openstack(cycle)
+                deleteCrm.openstack('cycle')
             } else {
                 println("skipping Delete Openstack since RunDeploy=${params.RunDeploy}")
             }
@@ -114,14 +114,14 @@ def regressionPrep2(dateValue, cycle) {
         },
         'Delete Anthos': {
             if(params.RunDeploy == true) {
-                deleteCrm.anthos(cycle)
+                deleteCrm.anthos('cycle')
             } else {
                 println("skipping Delete Anthos since RunDeploy=${params.RunDeploy}")
             }
         },
         'Delete Fake': {
             if(params.RunDeploy == true) {
-                deleteCrm.fake(cycle)
+                deleteCrm.fake('cycle')
             } else {
                 println("skipping Delete Fake since RunDeploy=${params.RunDeploy}")
             }

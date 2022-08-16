@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-def sdk_tests(cycle) {
+def sdk_tests('cycle') {
     try {
         if(params.RunSDKTests == true) {
             println('starting SDK tests')
@@ -35,7 +35,7 @@ def sdk_tests(cycle) {
     } 
 }
 
-def dme_tests(cycle) {
+def dme_tests('cycle') {
     try {
         if(params.RunDMETests == true) {
             println('starting DME tests')
@@ -64,7 +64,7 @@ def dme_tests(cycle) {
     }
 }
 
-def controller_tests(cycle) {
+def controller_tests('cycle') {
     try {
         if(params.RunControllerTests == true) {
             println('starting DME tests')
@@ -93,7 +93,7 @@ def controller_tests(cycle) {
     }
 }
 
-def mc_tests(cycle) {
+def mc_tests('cycle') {
     try {
         if(params.RunMCTests == true) {
             println('starting MC tests')
@@ -119,7 +119,7 @@ def mc_tests(cycle) {
     }
 }
 
-def frm_tests(cycle) {
+def frm_tests('cycle') {
     try {
         if(params.RunFRMTests == true) {
             println('starting FRM tests')
@@ -147,7 +147,7 @@ def frm_tests(cycle) {
     }
 }
 
-def anthos_tests(cycle) {
+def anthos_tests('cycle') {
     try {
         if(params.RunAnthosTests == true) {
             println('starting anthos tests')
@@ -178,7 +178,7 @@ def anthos_tests(cycle) {
     }
 }
 
-def vsphere_tests(cycle) {
+def vsphere_tests('cycle') {
     try {
         if(params.RunVsphereTests == true) {
             println('starting vshere tests')
@@ -209,7 +209,7 @@ def vsphere_tests(cycle) {
     }
 }
 
-def vcd_tests(cycle) {
+def vcd_tests('cycle') {
     try {
         if(params.RunVCDTests == true) {
             println('starting vcd tests')
@@ -239,7 +239,7 @@ def vcd_tests(cycle) {
     }
 }
 
-def openstack_tests(cycle) {
+def openstack_tests('cycle') {
     try {
         if(params.RunOpenstackTests == true) {
             println('starting openstack tests')
@@ -269,7 +269,7 @@ def openstack_tests(cycle) {
     }
 }
 
-def scan_tests(cycle) {
+def scan_tests('cycle') {
     try {
         if(params.RunScanTests == true) {
             println('starting scan tests')
@@ -289,7 +289,7 @@ def scan_tests(cycle) {
     }
 }
 
-def console_tests(cycle) {
+def console_tests('cycle') {
     try {
         if(params.RunConsoleTests == true) {
             println('starting console tests')
@@ -313,7 +313,7 @@ def console_tests(cycle) {
     }
 }
 
-def metrics_tests(cycle) {
+def metrics_tests('cycle') {
     try {
         if(params.RunMetricsTests == true) {
             println('starting metrics tests')
@@ -338,20 +338,20 @@ def metrics_tests(cycle) {
     }
 }
 
-def call(cycle) {
+def call('cycle') {
     parallel (
-        'SDK Tests': { sdk_tests(cycle) },
-        'DME Tests': { dme_tests(cycle) },
-        'Controller Tests': { controller_tests(cycle) },
-        'MC Tests': { mc_tests(cycle) },
-        'FRM Tests': { frm_tests(cycle) },
-        'Anthos Tests': { anthos_tests(cycle) },
-        'Vsphere Tests': { vsphere_tests(cycle) },
-        'Openstack Tests': { openstack_tests(cycle) },
-        'VCD Tests': { vcd_tests(cycle) },
-        'Scan Tests': { scan_tests(cycle) },
-        'Console Tests': { console_tests(cycle) },
-        'Metrics Tests': { metrics_tests(cycle) }
+        'SDK Tests': { sdk_tests('cycle') },
+        'DME Tests': { dme_tests('cycle') },
+        'Controller Tests': { controller_tests('cycle') },
+        'MC Tests': { mc_tests('cycle') },
+        'FRM Tests': { frm_tests('cycle') },
+        'Anthos Tests': { anthos_tests('cycle') },
+        'Vsphere Tests': { vsphere_tests('cycle') },
+        'Openstack Tests': { openstack_tests('cycle') },
+        'VCD Tests': { vcd_tests('cycle') },
+        'Scan Tests': { scan_tests('cycle') },
+        'Console Tests': { console_tests('cycle') },
+        'Metrics Tests': { metrics_tests('cycle') }
     )
 }
 

@@ -16,7 +16,7 @@ import groovy.transform.Field
 
 @Field gitcred = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 
-def call(cycle) {
+def call('cycle') {
     dir('go/src/github.com/mobiledgex') {
         checkout([$class: 'GitSCM',
             branches: [[name: 'master']],

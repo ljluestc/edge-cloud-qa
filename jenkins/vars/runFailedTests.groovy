@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-def mc_tests(cycle) {
+def mc_tests('cycle') {
     try {
         if(params.RunMCTests == true) {
             slackMessage.good('Starting MC Failed tests')
@@ -35,7 +35,7 @@ def mc_tests(cycle) {
     }
 }
 
-def controller_tests(cycle) {
+def controller_tests('cycle') {
     try {
         if(params.RunControllerTests == true) {
             slackMessage.good('Starting Controller Failed tests')
@@ -61,7 +61,7 @@ def controller_tests(cycle) {
     }
 }
 
-def dme_tests(cycle) {
+def dme_tests('cycle') {
     try {
         if(params.RunDMETests == true) {
             slackMessage.good('Starting DME Failed tests')
@@ -89,8 +89,8 @@ def dme_tests(cycle) {
 
 
 
-def call(cycle) {
-    stage('DME Tests') { dme_tests(cycle) }
-    stage('Controller Tests') { controller_tests(cycle) }
-    stage('MC Tests') { mc_tests(cycle) }
+def call('cycle') {
+    stage('DME Tests') { dme_tests('cycle') }
+    stage('Controller Tests') { controller_tests('cycle') }
+    stage('MC Tests') { mc_tests('cycle') }
 }

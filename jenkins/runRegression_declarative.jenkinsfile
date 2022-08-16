@@ -198,7 +198,7 @@ pipeline{
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE', message: 'execute parallel tests failed') {
                     script {
                         execute_tests = true
-                        executeParallelTests(cycle)
+                        executeParallelTests('cycle')
                     }
                 }
             }
@@ -242,7 +242,7 @@ pipeline{
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE', message: 'Rerun Failed tests failed') {
                     script { 
                         slackMessage.good('Starting Rerun Failed tests')
-                        runFailedTests(cycle)
+                        runFailedTests('cycle')
                     }
                 }
             }

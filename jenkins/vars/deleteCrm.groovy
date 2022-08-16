@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-def openstack(cycle) {
+def openstack('cycle') {
     print('delete andy openstack ')
 //    echo "openstack delete start build result ${currentBuild.result}"
 //    echo "delete openstack"
@@ -29,7 +29,7 @@ def openstack(cycle) {
 //    }
 }
 
-def anthos(cycle) {
+def anthos('cycle') {
     print('delete anthos ')
 
 //    echo "anthos delete start build result ${currentBuild.result}"
@@ -46,7 +46,7 @@ def anthos(cycle) {
 //    }
 }
 
-def fake(cycle) {
+def fake('cycle') {
     print('delete fake ')
 //    echo "fake delete start build result ${currentBuild.result}"
 //    echo "delete fake"

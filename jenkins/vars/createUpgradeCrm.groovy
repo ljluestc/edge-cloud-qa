@@ -16,7 +16,7 @@ import groovy.transform.Field
 
 @Field gitcred = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 
-def openstack(cycle) {
+def openstack('cycle') {
     print('create openstack ')
     build job: 'runTestcases', parameters: [
         string(name: 'Components', value: 'Automated, CRM, CreateCloudlet'), 
@@ -29,7 +29,7 @@ def openstack(cycle) {
         string(name: 'NumberParallelExecutions', value: '10')]
 }
 
-def anthos(cycle) {
+def anthos('cycle') {
     print('create anthos ')
     build job: 'runTestcases', parameters: [
         string(name: 'Components', value: 'Automated, CRM, CreateCloudlet'), 
@@ -41,7 +41,7 @@ def anthos(cycle) {
         string(name: 'NumberParallelExecutions', value: '10')]
 }
 
-def fake(cycle) {
+def fake('cycle') {
     print('create fake ')
     build job: 'runTestcases', parameters: [
         string(name: 'Components', value: 'Automated, CRM, CreateCloudlet'), 
@@ -83,13 +83,13 @@ def upgrade(cycle, dateValue) {
 def createUpgrade(cycle, dateValue) {
     parallel (
         'Create Openstack' : {
-            openstack(cycle)
+            openstack('cycle')
         },
         'Create Anthos': {
-            anthos(cycle)
+            anthos('cycle')
         },
         'Create Fake': {
-            fake(cycle)
+            fake('cycle')
         },
         'Upgrade Cloudlets': {
             upgrade(cycle, dateValue)
